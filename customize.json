@@ -1,6 +1,27 @@
 {
-  "name": "Damantha Jasinghe",
-  "greetingText": "I really like your name btw!",
-  "wishText": "May the js.prototypes always be with you! ;)",
-  "imagePath": "img/Damantha.png"
+  "name": "Bạn Hiền",
+  "age": 25,
+  "candles": 5,
+  "music": "",
+  "giftSteps": [
+    "Từ từ đã... 🤭",
+    "Gần tới rồi...",
+    "Thêm chút nữa thôi!",
+    "Hộp cuối, thề luôn 🤞"
+  ],
+  "giftImage": "",
+  "giftText": "Món quà lớn nhất chính là... được làm bạn với tôi 😎 (quà thật gửi sau nha!)",
+  "photos": [
+    { "src": "", "caption": "Lúc mới quen: còn ngây thơ lắm" },
+    { "src": "", "caption": "Tấm này mà lộ ra là hết đường lấy chồng/vợ" },
+    { "src": "", "caption": "Ăn xong không chịu trả tiền 💸" },
+    { "src": "", "caption": "Thanh xuân của chúng ta ✨" }
+  ],
+  "letter": [
+    "Chúc mừng sinh nhật nhé!",
+    "Thêm một tuổi mới, chúc bạn luôn khỏe mạnh, vui vẻ, làm gì cũng thành công, và quan trọng nhất là... bớt lười lại một chút 😆",
+    "Cảm ơn vì đã luôn ở đây. Có bạn, mọi chuyện đều vui hơn rất nhiều."
+  ],
+  "signature": "Thương, người bạn đẹp trai nhất của bạn 😎",
+  "thanksLink": ""
 }

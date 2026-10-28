@@ -1,29 +1,50 @@
-# Happy Birthday!!!
+# 🎂 Happy Birthday – bản có tương tác
 
-# Wish someone special happy birthday in a special way.
+Một trang chúc mừng sinh nhật gồm 5 màn, người xem tự bấm để đi tiếp:
 
-## [See it Live](https://damantha.tk/Happy-BirthDay/)
+1. **Cảnh báo giả** – thanh "đang tính tuổi" kẹt ở 99%, nút "Không" bỏ chạy khi bị bấm.
+2. **Thổi nến** – thổi vào micro để tắt nến (hoặc chạm vào nến), pháo giấy + nhạc Happy Birthday.
+3. **Hộp quà lừa đảo** – mở mãi mới tới hộp cuối.
+4. **Bảo tàng kỷ niệm** – ảnh polaroid rơi xuống kèm chú thích hài.
+5. **Thư tay** – phong bì mở ra, chữ tự gõ từng ký tự.
 
-It was a birthday of one of my friend and I wanted to wish her in a special way. So I put together this animated web page real quick to say Happy Birthday.
+Nhạc và hiệu ứng âm thanh được tự tạo bằng Web Audio, không cần file nhạc. Có nút tắt/bật âm thanh ở góc trên.
 
-Feel free to use it to wish your friend if you want.
-You can get it running in a few easy steps:
+## Tùy chỉnh
 
-* Fork the repository
-* Open `customize.json` and replace name/wish-message/image with your own
-* Turn on GitHub pages for the repository (Settings > GitHub Pages)
-* Send the URL that you get at the above step to your friend
+Mọi nội dung nằm trong `customize.json`:
 
-I've created the JSON file for easy and quick customizability. If you want to do more customizing, simply edit the HTML file. But in that case, leave the JSON fields empty since it overwrites the HTML. Please note that I've created this page in a hurry and it comes with no warranty, so check yourself before sending it to your friend.
+| Trường | Ý nghĩa |
+| --- | --- |
+| `name` | Tên người nhận |
+| `age` | Tuổi (để trống nếu không muốn "bóc phốt") |
+| `candles` | Số nến trên bánh (1–10) |
+| `music` | Đường dẫn file nhạc riêng, ví dụ `audio/nhac.mp3`. Để trống = nhạc Happy Birthday tự tạo |
+| `giftSteps` | Các câu hiện ra mỗi lần mở hộp quà "giả" |
+| `giftImage`, `giftText` | Ảnh và lời nhắn khi mở hộp quà cuối |
+| `photos` | Danh sách ảnh `{ "src": "img/anh1.jpg", "caption": "..." }`. Để `src` trống sẽ hiện emoji |
+| `letter` | Các đoạn của lá thư |
+| `signature` | Chữ ký cuối thư |
+| `thanksLink` | Link để người nhận nhắn lại, ví dụ `https://m.me/ten-cua-ban` hoặc `https://zalo.me/sdt` |
 
-I've used plain HTML, CSS and JavaScript with [GSAP](https://greensock.com/gsap) for animations.
+Có thể đổi nhanh tên/tuổi qua link mà không sửa file: `.../?name=Lan&age=20`
 
+## Chạy thử trên máy
 
-# Special Credits 
-- [Afiur Rahman Fahim](https://github.com/faahim/)
+Trang cần chạy qua server (mở thẳng file `index.html` sẽ không đọc được `customize.json`):
 
-# Contributing
+```bash
+python -m http.server 7777
+```
 
-If you have any idea to make it more interesting, feel free to send a PR, or create an issue for a feature request.
+Rồi mở http://localhost:7777
 
-Stay happy and keep the people you care about happy. :)
+**Lưu ý micro:** trình duyệt chỉ cho dùng micro trên `https://` hoặc `localhost`. GitHub Pages có https nên dùng được. Nếu người xem không cho phép micro, họ vẫn chạm vào nến để thổi được.
+
+## Đăng lên mạng
+
+Bật GitHub Pages cho repo (Settings → Pages) rồi gửi link cho người nhận.
+
+## Credits
+
+Dựa trên ý tưởng gốc của [Afiur Rahman Fahim](https://github.com/faahim/). Pháo giấy dùng [canvas-confetti](https://github.com/catdad/canvas-confetti).
